@@ -8,6 +8,6 @@ const seed = await bip39.mnemonicToSeed(mnemonic);
 const root = bip32.fromSeed(seed, network);
 const account = root.derivePath("m/44'/1'/0'/0/0");
 const { address } = bitcoin.payments.p2pkh({ pubkey: account.publicKey, network });
-// Address
+
 console.log("Mnemonic:", mnemonic);
 console.log("Address:", address);
